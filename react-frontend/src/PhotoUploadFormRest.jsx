@@ -29,7 +29,6 @@ const UploadImage = () => {
 
       console.log('Upload successful:', response.data);
       window.location.href = '/';
-      // Add any additional logic you need after a successful upload
     } catch (error) {
       console.error('Error uploading image:', error.message);
     }
@@ -37,7 +36,6 @@ const UploadImage = () => {
 
   return (
     <div>
-        {/* <Navbar /> */}
         <div className='container py-3'>
 
       <h2>Upload Photo</h2>
