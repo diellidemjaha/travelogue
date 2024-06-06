@@ -30,7 +30,4 @@ class MySavedItems
             'savedItems' => $savedItems,
         ];
     }
-    // {
-    //     return SavedItem::with(['author', 'user'])->get();
-    // }
 }
