@@ -27,7 +27,7 @@ const Signup = () => {
     const handleSignup = async () => {
         try {
             const response = await signup({ variables: { name, email, password } });
-            console.log(response.data.createUser); // Access the response data
+            console.log(response.data.createUser); 
             window.location.href = '/login';
         } catch (error) {
             console.error(error.message);
@@ -49,10 +49,6 @@ const Signup = () => {
                     <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                     <h1 className='text-primary py-3 text-center' style={{fontSize: '2em'}}>Sign up to use Travelogue</h1>
                         <form>
-                            {/* <div className="divider d-flex align-items-center my-4">
-                <p className="text-center fw-bold mx-3 mb-0">Or</p>
-              </div> */}
-
                             {/* Email input */}
                             <div className="form-outline mb-4">
                                 <input
@@ -93,21 +89,6 @@ const Signup = () => {
                                     Password
                                 </label>
                             </div>
-
-                            {/* <div className="d-flex justify-content-between align-items-center">
-                <div className="form-check mb-0">
-                  <input
-                    className="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form2Example3"
-                  />
-                </div>
-                <a href="#!" className="text-body">
-                  Forgot password?
-                </a>
-              </div> */}
-
                             <div className="text-center text-lg-start mt-4 pt-2">
                                 <button
                                     type="button"
@@ -125,11 +106,6 @@ const Signup = () => {
                     </div>
                 </div>
             </div>
-            {/* <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-        <div className="text-white mb-3 mb-md-0">
-          Copyright Travelogue © 2024. All rights reserved.
-        </div>
-      </div> */}
         </section>
     );
 };
