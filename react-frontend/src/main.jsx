@@ -6,7 +6,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 const yourAccessToken = localStorage.getItem('token');
 
 const client = new ApolloClient({
-  uri: 'http://localhost:8000/graphql', // Replace with your GraphQL server endpoint
+  uri: 'http://localhost:8000/graphql', 
   headers: {
     Authorization: `Bearer ${yourAccessToken}`,
   },
