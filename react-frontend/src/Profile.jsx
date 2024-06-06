@@ -25,7 +25,6 @@ const Profile = ({ refetch }) => {
   });
 
   useEffect(() => {
-    // Optional: Handle loading or error states if needed
   }, [loading, error]);
 
   if (loading) return <p>Loading...</p>;
@@ -46,7 +45,6 @@ const Profile = ({ refetch }) => {
       },
     })
       .then(response => {
-        // refetch();
         console.log(response.data.message);
         window.location.href='/profile';
       })
