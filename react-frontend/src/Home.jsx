@@ -265,7 +265,7 @@ const Home = () => {
 
   const handleSaveItemToCollectionConfirm = () => {
     if (selectedCollection) {
-      saveItemToCollection(selectedCollection, itemId);  // Pass variables separately
+      saveItemToCollection(selectedCollection, itemId); 
       setSavedItems((prevSavedItems) => ({ ...prevSavedItems, [itemId]: true }));
       setSelectedCollection('');
     } else if (newCollectionName) {
@@ -399,12 +399,6 @@ const Home = () => {
                               {likedItineraries[item.id] ? 'Liked' : 'Like'}
                             </button>
                           )}
-                          {/* <button
-                            className={`btn ${likedItems[item.id] ? 'btn-secondary' : 'btn-danger'}`}
-                            onClick={() => handleLike(item.id, userId)}
-                          >
-                            {likedItems[item.id] ? 'Liked' : 'Like'}
-                          </button> */}
                         </>
                       </div>
                     </div>
