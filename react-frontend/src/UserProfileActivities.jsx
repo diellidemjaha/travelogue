@@ -179,7 +179,7 @@ const UserProfileActivities = ({ userId }) => {
 
   const handleSaveItemToCollectionConfirm = () => {
     if (selectedCollection) {
-      saveItemToCollection(selectedCollection, itemId);  // Pass variables separately
+      saveItemToCollection(selectedCollection, itemId);  
       setSavedItems((prevSavedItems) => ({ ...prevSavedItems, [itemId]: true }));
       setSelectedCollection('');
     } else if (newCollectionName) {
@@ -194,25 +194,6 @@ const UserProfileActivities = ({ userId }) => {
   const openFullScreen = (imageUrl) => {
     setFullScreenImage(imageUrl);
   };
-
-  // const handleSaveItem = (itemId) => {
-  //   const yourAccessToken = localStorage.getItem('token');
-  //   const Token = localStorage.getItem('token');
-
-  
-  //   saveItem({
-  //     variables: {
-  //       itemId
-  //     },
-  //     context: {
-  //       headers: {
-  //         Authorization: `Bearer ${Token}`,
-  //       },
-  //     },
-  //     // You can add an update function to update the cache if needed
-  //   });
-  //   setSavedItems((prevItems) => [...prevItems, itemId]);
-  // };
 
   return (
     <>
@@ -243,12 +224,10 @@ const UserProfileActivities = ({ userId }) => {
                 <p className="card-text">Created At: {photo.created_at}</p>
                 <div className="d-flex justify-content-between">
                 </div>
-                {/* {item.__typename === 'Photo' && ( */}
+          
                 <button
                     className={`btn ${savedItems[photo.id] ? 'btn-secondary' : 'btn-danger'}`}
                   onClick={() => handleSaveItemToCollection(selectedCollection, photo.id)}
-                  // onClick={() => handleSaveItem(photo.id)}
-                  // disabled={savedItems.includes(photo.id)}
                   disabled={savedItems[photo.id]}
                 >
                {savedItems[photo.id] ? 'Saved' : 'Save This'}
@@ -300,7 +279,6 @@ const UserProfileActivities = ({ userId }) => {
                 <option value="" selected disabled>
                 Select Collection
               </option>
-              {/* Display user's collections in the dropdown */}
               {collectionsData?.me?.collections.map((collection) => (
                 <option key={collection.id} value={collection.id}>
                   {collection.name}
@@ -334,7 +312,6 @@ const UserProfileActivities = ({ userId }) => {
     {showModal && <div className="modal-backdrop fade show"></div>}
 
     {fullScreenImage && <ImageFullScreen imageUrl={fullScreenImage} onClose={() => setFullScreenImage(null)} />}
-  {/* </div> */}
 </>
   );
 };
