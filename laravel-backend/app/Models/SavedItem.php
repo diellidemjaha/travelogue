@@ -13,11 +13,8 @@ class SavedItem extends Model
         'user_id',
         'image_path',
         'collection_id',
-        // Add other fillable fields as needed
     ];
 
-    // You can define relationships if needed
-    // For example, assuming you have a User model for authors and users
     public function author()
     {
         return $this->belongsTo(User::class, 'author_id');
