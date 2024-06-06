@@ -128,9 +128,6 @@ const SavedItem = ({ item, user }) => {
 
         <div className="card-body">
           <h3>Saved Item Details</h3>
-          {/* <p>ID: {item.id}</p> */}
-          {/* <p>Author ID: {item.author_id}</p> */}
-          {/* <p>Author: {author ? author.name : 'Unknown Author'}</p> */}
           <Link to={`/user/${item.author_id}`} className="text-danger">
             <p>Author: {author ? author.name : 'Unknown Author'}</p>
           </Link>
