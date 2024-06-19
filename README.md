@@ -25,11 +25,14 @@ To enhance the interaction between the backend and GraphQL, Travelogue utilizes 
 
 ### Frontend Technologies:
 
-## React: The frontend of Travelogue is developed using React, a popular JavaScript library for building user interfaces. React's component-based architecture facilitates the creation of dynamic and responsive user interfaces.
+## React: 
+The frontend of Travelogue is developed using React, a popular JavaScript library for building user interfaces. React's component-based architecture facilitates the creation of dynamic and responsive user interfaces.
 
-## Bootstrap: Travelogue adopts Bootstrap to ensure a sleek and mobile-friendly design. Bootstrap's CSS and JavaScript components are utilized to enhance the overall visual appeal and user experience of the platform.
+## Bootstrap: 
+Travelogue adopts Bootstrap to ensure a sleek and mobile-friendly design. Bootstrap's CSS and JavaScript components are utilized to enhance the overall visual appeal and user experience of the platform.
 
-## Apollo Client: For seamless communication between the frontend and the GraphQL backend, Travelogue employs Apollo Client. This powerful library simplifies state management and data fetching, enabling a smooth and efficient user experience.
+## Apollo Client: 
+For seamless communication between the frontend and the GraphQL backend, Travelogue employs Apollo Client. This powerful library simplifies state management and data fetching, enabling a smooth and efficient user experience.
 
 
 ### Key Features:
