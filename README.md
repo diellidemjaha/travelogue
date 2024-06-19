@@ -11,21 +11,26 @@ Travelogue is an travel platform, for sharing and storing collections and user i
 
 ### Backend Technologies:
 
-Laravel: The backend of Travelogue is powered by Laravel, a PHP web application framework known for its elegance and simplicity. Laravel provides a solid foundation for building secure, scalable, and feature-rich applications.
+## Laravel: 
+The backend of Travelogue is powered by Laravel, a PHP web application framework known for its elegance and simplicity. Laravel provides a solid foundation for building secure, scalable, and feature-rich applications.
 
-MySQL: The project relies on MySQL, a powerful relational database management system, to efficiently store and manage data related to user profiles, posts, photos, and itineraries.
+## MySQL: 
+The project relies on MySQL, a powerful relational database management system, to efficiently store and manage data related to user profiles, posts, photos, and itineraries.
 
-GraphQL with Laravel Sanctum: Travelogue leverages GraphQL for efficient and flexible data querying. Laravel Sanctum is employed for user authentication, ensuring secure access to the platform's features.
+## GraphQL with Laravel Sanctum: 
+Travelogue leverages GraphQL for efficient and flexible data querying. Laravel Sanctum is employed for user authentication, ensuring secure access to the platform's features.
 
-Lighthouse: To enhance the interaction between the backend and GraphQL, Travelogue utilizes Lighthouse. Lighthouse is a PHP package that serves as a GraphQL server for Laravel, streamlining the integration of GraphQL into the Laravel ecosystem.
+## Lighthouse: 
+To enhance the interaction between the backend and GraphQL, Travelogue utilizes Lighthouse. Lighthouse is a PHP package that serves as a GraphQL server for Laravel, streamlining the integration of GraphQL into the Laravel ecosystem.
 
 ### Frontend Technologies:
 
-React: The frontend of Travelogue is developed using React, a popular JavaScript library for building user interfaces. React's component-based architecture facilitates the creation of dynamic and responsive user interfaces.
+## React: The frontend of Travelogue is developed using React, a popular JavaScript library for building user interfaces. React's component-based architecture facilitates the creation of dynamic and responsive user interfaces.
 
-Bootstrap: Travelogue adopts Bootstrap to ensure a sleek and mobile-friendly design. Bootstrap's CSS and JavaScript components are utilized to enhance the overall visual appeal and user experience of the platform.
+## Bootstrap: Travelogue adopts Bootstrap to ensure a sleek and mobile-friendly design. Bootstrap's CSS and JavaScript components are utilized to enhance the overall visual appeal and user experience of the platform.
 
-Apollo Client: For seamless communication between the frontend and the GraphQL backend, Travelogue employs Apollo Client. This powerful library simplifies state management and data fetching, enabling a smooth and efficient user experience.
+## Apollo Client: For seamless communication between the frontend and the GraphQL backend, Travelogue employs Apollo Client. This powerful library simplifies state management and data fetching, enabling a smooth and efficient user experience.
+
 
 ### Key Features:
 
