@@ -9,7 +9,8 @@ Travelogue is an travel platform, for sharing and storing collections and user i
 ![Example Screenshot](travelogue-activities-1.jpg)
 
 
-### Backend Technologies:
+> [!NOTE]
+> ### Backend Technologies:
 
 ## Laravel: 
 The backend of Travelogue is powered by Laravel, a PHP web application framework known for its elegance and simplicity. Laravel provides a solid foundation for building secure, scalable, and feature-rich applications.
@@ -23,7 +24,8 @@ Travelogue leverages GraphQL for efficient and flexible data querying. Laravel S
 ## Lighthouse: 
 To enhance the interaction between the backend and GraphQL, Travelogue utilizes Lighthouse. Lighthouse is a PHP package that serves as a GraphQL server for Laravel, streamlining the integration of GraphQL into the Laravel ecosystem.
 
-### Frontend Technologies:
+> [!NOTE]
+> ### Frontend Technologies:
 
 ## React: 
 The frontend of Travelogue is developed using React, a popular JavaScript library for building user interfaces. React's component-based architecture facilitates the creation of dynamic and responsive user interfaces.
