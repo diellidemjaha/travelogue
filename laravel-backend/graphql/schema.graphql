@@ -17,8 +17,8 @@ type Query {
         collections(id: ID!): Collection @find
         savedCollectionItems(id: ID!): [SavedItem!]! @field(resolver: "App\\GraphQL\\Queries\\SavedCollectionItems@resolve")
           photosWithLikes: [Photo!]!
-          itinerariesWithLikes: [Itinerary!]!
-          postsWithLikes: [Post!]!
+          itinerariesWithLikes: [Itinerary!]! @all
+          postsWithLikes: [Post!]! @all
 }
 
 type User {
@@ -63,7 +63,7 @@ type Photo {
 type Itinerary {
     id: ID!
     description: String!
-    user: User! @belongsTo
+    user_id: User! @belongsTo
     created_at: DateTime!
      likes: Int
 }

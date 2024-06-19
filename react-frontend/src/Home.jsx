@@ -159,13 +159,21 @@ const Home = () => {
 
 
   // Fetch itineraries
-  const { loading: itinerariesLoading, error: itinerariesError, data: itinerariesData } = useQuery(GET_ITINERARIES);
+  const { loading: itinerariesLoading, error: itinerariesError, data: itinerariesData } = useQuery(GET_ITINERARIES_WITH_LIKES, {
+    onCompleted: data => console.log("Itineraries with likes Data:", data),
+    onError: error => console.error("Itineraries Error:", error),
+  });
+  
 
   // Fetch posts
-  const { loading: postsLoading, error: postsError, data: postsData } = useQuery(GET_POSTS);
+  const { loading: postsLoading, error: postsError, data: postsData } = useQuery(GET_POSTS_WITH_LIKES, {
+    onCompleted: data => console.log("Posts with likes Data:", data),
+  });
 
   // Fetch photos
-  const { loading: photosLoading, error: photosError, data: photosData } = useQuery(GET_PHOTOS);
+  // const { loading: photosLoading, error: photosError, data: photosData } = useQuery(GET_PHOTOS, {
+  //   onCompleted: data => console.log("Photos Data:", data),
+  // });
 
   //Fetch user data
   const { loading: userLoading, error: userError, data: userData } = useQuery(ME_QUERY);
@@ -173,36 +181,39 @@ const Home = () => {
   // Fetch user's collections
   const { loading: collectionsLoading, error: collectionsError, data: collectionsData } = useQuery(GET_MY_COLLECTIONS);
 
-  const { loading, error, data } = useQuery(GET_PHOTOS_WITH_LIKES);
+  const { loading: photosLoading, error: photosError, data: photosData } = useQuery(GET_PHOTOS_WITH_LIKES, {
+    onCompleted: data => console.log("Photos with likes Data:", data),
+  });
 
 
 
 
   const [saveItemToCollectionMutation] = useMutation(SAVE_ITEM_TO_COLLECTION_MUTATION);
   const [createNewCollectionMutation] = useMutation(CREATE_NEW_COLLECTION_MUTATION);
+
   const [likePhoto] = useMutation(LIKE_PHOTO_MUTATION, {
     // Refetch photos after liking
     refetchQueries: [{ query: GET_PHOTOS_WITH_LIKES }],
   });
   const [likePostMutation] = useMutation(LIKE_POST_MUTATION, {
     // Refetch photos after liking
-    refetchQueries: [{ query: GET_POSTS }],
+    refetchQueries: [{ query: GET_POSTS_WITH_LIKES }],
   });
   const [likeItineraryMutation] = useMutation(LIKE_ITINERARY_MUTATION, {
     // Refetch photos after liking
-    refetchQueries: [{ query: GET_ITINERARIES }],
+    refetchQueries: [{ query: GET_ITINERARIES_WITH_LIKES }],
   });
 
   // Combine data from itineraries, posts, and photos
   const combinedData = [
-    ...(itinerariesData?.itinerary || []),
-    ...(postsData?.post || []),
-    ...(photosData?.photo || []),
+    ...(itinerariesData?.itinerariesWithLikes || []),
+    ...(postsData?.postsWithLikes || []),
+    ...(photosData?.photosWithLikes || []),
   ];
 
   // Sort combinedData by created_at in descending order
   const sortedData = combinedData.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-
+console.log("dioni data me dielli", sortedData)
   const Token = localStorage.getItem('token');
   const user = userData?.user;
 
