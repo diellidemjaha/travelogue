@@ -37,6 +37,19 @@ Travelogue adopts Bootstrap to ensure a sleek and mobile-friendly design. Bootst
 For seamless communication between the frontend and the GraphQL backend, Travelogue employs Apollo Client. This powerful library simplifies state management and data fetching, enabling a smooth and efficient user experience.
 
 
+
+> [!NOTE]
+> ## Installation
+> 1. Clone the repository: `git clone https://github.com/diellidemjaha/taskform.git`
+> 2. Navigate to backend folder root
+> 3. Install dependencies for Laravel: `composer install`
+> 4. Navitage to frontend folder root
+> 5. Install dependencies for React: `npm install`
+> 6. Set up your database and update the `.env` file with the necessary configurations.
+> 7. Run migrations: `php artisan migrate`
+> 8. Start the development server: `php artisan serve` for Laravel and `npm start` for React.
+> 9. The app will run into `localhost:5173` port of React.
+
 ### Key Features:
 
 Authentication: Utilizing Laravel Sanctum and GraphQL, Travelogue ensures secure user authentication, allowing users to access personalized features and data.
