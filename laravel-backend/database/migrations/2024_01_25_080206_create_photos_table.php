@@ -15,6 +15,7 @@
                 $table->id();
                 $table->string('image_path');
                 $table->integer('likes')->default(0);
+                $table->unsignedBigInteger('user_id');
                 $table->timestamps();
 
                 $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

@@ -199,7 +199,7 @@ const Home = () => {
 
   // Sort combinedData by created_at in descending order
   const sortedData = combinedData.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-
+  console.log('data', combinedData);
   const Token = localStorage.getItem('token');
   const user = userData?.user;
 
@@ -323,10 +323,10 @@ const Home = () => {
       <div className="container">
         <div className="album py-5 bg-light mt-3">
           <div className="container">
-            <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-3">
+            <div className="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-3 d-flex justify-content-center align-items-center">
               {sortedData.map((item) => (
-                <div key={item.id} className="col">
-                  <div className="card shadow-sm">
+                <div key={item.id} className="col-lg-8">
+                  <div className="card shadow-sm p-lg-5 p-sm-0">
                     {item.__typename === 'Photo' && item.image_path && (
                       <img
                         src={`${apiUrl}${item.image_path}`}
