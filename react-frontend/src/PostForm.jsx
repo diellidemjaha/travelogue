@@ -14,13 +14,12 @@ const CREATE_POST = gql`
 
 const PostForm = () => {
   const [content, setContent] = useState('');
-  const user_id = localStorage.getItem('user_id'); // Assuming user_id is stored in localStorage
+  const user_id = localStorage.getItem('user_id'); 
 
   const [createPost, { loading, error }] = useMutation(CREATE_POST, {
     onCompleted: () => {
-      // Handle successful form submission, e.g., show a success message or update the post list
       console.log('Post created successfully!');
-      setContent(''); // Clear the content field
+      setContent(''); 
       window.location.href = '/';
     },
   });
@@ -28,9 +27,7 @@ const PostForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate the form fields if needed
 
-    // Call the mutation
     createPost({
       variables: {
         user_id,

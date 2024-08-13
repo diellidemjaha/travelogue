@@ -79,35 +79,19 @@ const Navbar = () => {
                                 Photo
                             </a>
                         </li>
-                        {/* <li className="nav-item">
-                            <a className="nav-link" href="/photouploadformgraphql">
-                                Photo GraphQL
-                            </a>
-                        </li> */}
                         <li className="nav-item">
                             <a className="nav-link" href="/postform">
                                 Post
                             </a>
                         </li>
-                        {/* <li className="nav-item">
-                            <a className="nav-link" href="/mysaved">
-                               My Saved
-                            </a>
-                        </li> */}
                         <li className="nav-item">
                             <a className="nav-link" href="/usercollections">
                              My Collections
                             </a>
                         </li>
-                        {/* <li className="nav-item">
-              <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">
-                Disabled
-              </a>
-            </li> */}
                     {loggedIn ? (
                         <>
                             <div className="ms-auto">
-                                {/* <p style={{color: 'white'}}>Welcome User</p> */}
                                 <div className='btn btn-outline-light' onClick={() => handleLogout()}>Sign out</div>
                             </div>
                         </>

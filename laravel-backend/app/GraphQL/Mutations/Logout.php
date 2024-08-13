@@ -11,6 +11,6 @@ class Logout
     {
         Auth::logout();
 
-        return true; // Or any response you want after successful logout
+        return true; 
     }
 }

@@ -5,7 +5,7 @@ namespace App\GraphQL\Resolvers;
 
 use App\Models\Post;
 
-class PostResolver
+class PostsWithLikes
 {
     public function find($root, array $args)
     {

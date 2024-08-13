@@ -1,7 +1,0 @@
-# resources/graphql/types/PostType.graphql
-
-type Post {
-    id: ID!
-    content: String!
-    user: User!
-}

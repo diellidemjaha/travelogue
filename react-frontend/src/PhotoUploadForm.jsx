@@ -37,14 +37,13 @@ const PhotoUploadForm = () => {
           image: file,
           image_path: filename,
         },
-        // This is essential to tell Apollo Client to treat 'image' as a File
         context: {
           useMultipart: true,
         },
       });
 
       console.log('Uploaded Photo:', data.createPhoto);
-      window.location.href = '/'; // Redirect to the home page after a successful upload
+      window.location.href = '/';
     } catch (error) {
       console.error('Error uploading photo:', error.message);
     }

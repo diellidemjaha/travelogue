@@ -36,7 +36,6 @@ const Login = () => {
         window.location.href = '/';
 
 
-        // Handle further actions, such as redirecting to a protected route
       }
     } catch (error) {
       console.error(error.message);
@@ -59,10 +58,6 @@ const Login = () => {
           <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
             <h1 className='text-primary py-3 text-center' style={{fontSize: '2em'}}>Sign in to Travelogue</h1>
             <form>
-              {/* <div className="divider d-flex align-items-center my-4">
-                <p className="text-center fw-bold mx-3 mb-0">Or</p>
-              </div> */}
-
               {/* Email input */}
               <div className="form-outline mb-4">
                 <input
@@ -91,20 +86,6 @@ const Login = () => {
                 </label>
               </div>
 
-              {/* <div className="d-flex justify-content-between align-items-center">
-                <div className="form-check mb-0">
-                  <input
-                    className="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form2Example3"
-                  />
-                </div>
-                <a href="#!" className="text-body">
-                  Forgot password?
-                </a>
-              </div> */}
-
               <div className="text-center text-lg-start mt-4 pt-2">
                 <button
                   type="button"
@@ -122,11 +103,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-      {/* <div className="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-        <div className="text-white mb-3 mb-md-0">
-          Copyright Travelogue © 2024. All rights reserved.
-        </div>
-      </div> */}
     </section>
   );
 };

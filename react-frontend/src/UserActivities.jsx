@@ -160,12 +160,6 @@ const handleCancelEditItinerary = () => {
                 <p className="card-text">{post.content}</p>
                 <p className="card-text">Created At: {post.created_at}</p>
                 <div className="d-flex justify-content-between">
-                  {/* <button className="btn btn-primary">Edit</button> */}
-                  {/* <Link to={`/updatepost/${post.id}`} className="btn btn-primary">
-                      Edit
-                    </Link> */}
-                     {/* <UpdatePostForm postId={post.id} currentContent={post.content} onClose={refetch} /> */}
-                      {/* Conditionally render the UpdatePostForm */}
                     {isEditingPost && editingPostId === post.id ? (
                       <UpdatePostForm postId={post.id} currentContent={post.content} onClose={handleCancelEdit} />
                     ) : (
@@ -187,7 +181,6 @@ const handleCancelEditItinerary = () => {
                 <img src={`${apiUrl}${photo.image_path}`} className="card-img-top" alt={`Photo ${photo.id}`} />
                 <p className="card-text">Created At: {photo.created_at}</p>
                 <div className="d-flex justify-content-between">
-                  {/* <button className="btn btn-primary">Edit</button> */}
                   <button className="btn btn-danger" onClick={() => handleDeletePhoto(photo.id)}>Delete</button>
                 </div>
               </div>
@@ -202,10 +195,6 @@ const handleCancelEditItinerary = () => {
                 <p className="card-text">{itinerary.description}</p>
                 <p className="card-text">Created At: {itinerary.created_at}</p>
                 <div className="d-flex justify-content-between">
-                  {/* <button className="btn btn-primary">Edit</button> */}
-                  {/* <Link to={`/updatepost/${post.id}`} className="btn btn-primary">
-                      Edit
-                    </Link> */}
                         {isEditingItinerary && editingItineraryId === itinerary.id ? (
                       <UpdateItineraryForm itineraryId={itinerary.id} currentDescription={itinerary.description} onClose={handleCancelEditItinerary} />
                     ) : (

@@ -18,14 +18,9 @@ final class SaveItem
         }
     
         $user = auth('sanctum')->user();
-        // Retrieve the authenticated user
-        // $userId = 1;
-
-        // Optionally, you can retrieve the user by ID if needed
-        // $user = User::find($userId);
+     
         $token = request()->bearerToken();
         info('Bearer Token:', [$token]);
-        // $user = auth()->user();
 
         if (!$user) {
             // If not authenticated, throw an exception or handle it as needed
